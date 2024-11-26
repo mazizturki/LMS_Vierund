@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supprimer Étudiant</title>
+    <link rel="stylesheet" href="..\static\styles_menu.css">
+    <link rel="icon" href="..\static\logo.png" type="image/png">
+
+</head>
+<body>
+<header id="img"><a href="adminDashboard.html"> <img src="..\static\logo.png" alt="Logo"></a></header>
+
+    <div class="page-container">
+        <h2>Supprimer un Étudiant</h2>
+        <form action="/supprimerEtudiant" method="post">
+            <input type="text" name="cin" placeholder="CIN de l'étudiant" required>
+            <button type="submit">Supprimer</button>
+        </form>
+    </div>
+</body>
+</html>

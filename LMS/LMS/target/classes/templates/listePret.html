@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des Livres</title>
+  <link rel="stylesheet" href="..\static\styles_menu.css">
+  <link rel="icon" href="..\static\logo.png" type="image/png">
+
+</head>
+<body>
+<header id="img"><a href="adminDashboard.html"> <img src="..\static\logo.png" alt="Logo"></a></header>
+<div class="page-container">
+  <h2>Liste des Prêts</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>ID Prêt</th>
+      <th>Nom Invité</th>
+      <th>CIN Invité</th>
+      <th>Titre Livre</th>
+      <th>Date Prêt</th>
+      <th>Date Retour</th>
+      <th>État</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="pret : ${prets}">
+      <td th:text="${pret.idPret}"></td>
+      <td th:text="${pret.nomInv}"></td>
+      <td th:text="${pret.cinInv}"></td>
+      <td th:text="${pret.livre.titre}"></td>
+      <td th:text="${pret.datePret}"></td>
+      <td th:text="${pret.dateRetour}"></td>
+      <td th:text="${pret.estTermine ? 'Terminé' : 'En cours'}"></td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+</body>
+</html>
