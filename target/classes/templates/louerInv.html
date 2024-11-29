@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louer pour un Invité</title>
+    <link rel="stylesheet" href="..\static\styles_menu.css">
+    <link rel="icon" href="..\static\logo.png" type="image/png">
+
+</head>
+<body>
+<header id="img"><a href="adminDashboard.html"> <img src="..\static\logo.png" alt="Logo"></a></header>
+    <div class="page-container">
+        <h2>Louer un Livre pour un Invité</h2>
+        <form action="/louer-invite" method="post">
+            <input type="text" name="nomInv" placeholder="Nom de l'invité" required>
+            <input type="text" name="cinInv" placeholder="CIN de l'invité" required>
+            <input type="text" name="isbn" placeholder="ISBN du Livre" required>
+            <input type="date" name="datePret" placeholder="Date de Prêt " required>
+            <input type="date" name="dateRet" placeholder="Date de retour prévue" required>
+            <button type="submit">Louer</button>
+        </form>
+    </div>
+</body>
+</html>
