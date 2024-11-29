@@ -1,6 +1,6 @@
 package com.vierund.LMS.controller;
 
-import com.vierund.LMS.Membres;
+import com.vierund.LMS.entity.Membres;
 import com.vierund.LMS.service.loginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

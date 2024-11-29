@@ -1,7 +1,7 @@
 package com.vierund.LMS.controller;
 
-import com.vierund.LMS.Livres;
-import com.vierund.LMS.pretLivre;
+import com.vierund.LMS.entity.Livres;
+import com.vierund.LMS.entity.pretLivre;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
