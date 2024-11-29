@@ -1,0 +1,231 @@
+/* Styles globaux */
+body {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+    color: #fff;
+    height: 100vh; 
+}
+
+/* Conteneur principal qui englobe la sidebar et le contenu */
+.dashboard-container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px; /* Largeur de la sidebar */
+    background: rgba(52, 58, 64, 0.9); /* Couleur avec opacité */
+    backdrop-filter: blur(10px); /* Effet de flou en arrière-plan */
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    padding: 20px; /* Espace interne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre pour un effet d'élévation */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed; /* Fixe la position de la sidebar sur le côté gauche */
+    top: 0;
+    left: 0;
+}
+
+/* Logo positionné en haut */
+.logo {
+    width: 100%;
+    max-width: 200px; /* Taille maximale du logo */
+    margin: 0 0 20px 0; /* Espacement uniquement en bas */
+    padding: 0;
+    height: auto; /* Maintient les proportions */
+}
+
+.logo img {
+    width: 100%; /* S'adapte à la largeur du conteneur */
+    height: auto; /* Conserve les proportions */
+    display: block; /* Supprime les espaces des images inline */
+}
+
+/* Menu de la sidebar */
+.sidebar ul {
+    list-style: none; /* Supprime les puces */
+    padding: 0; /* Supprime les marges internes */
+    margin: 0; /* Supprime les marges externes */
+    width: 100%; /* S'adapte à la largeur de la sidebar */
+}
+
+.sidebar li {
+    margin: 15px 0; /* Espacement vertical entre les éléments */
+}
+
+.sidebar #a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: #fff; /* Couleur blanche pour le texte */
+    font-size: 16px; /* Taille du texte */
+    display: block; /* Chaque lien prend tout l'espace disponible */
+    padding: 10px 15px; /* Espacement interne du lien */
+    border-radius: 8px; /* Bords arrondis */
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+    transition: background 0.3s, transform 0.2s, color 0.3s; /* Effets au survol */
+}
+
+.sidebar #a:hover {
+    background-color: rgba(73, 80, 87, 0.7); /* Change la couleur de fond */
+    color: #f8f9fa; /* Accentue la couleur du texte */
+    transform: translateX(5px); /* Décalage vers la droite */
+}
+
+.sidebar .log{
+    text-decoration: none; 
+    color: white;
+    color: #fff; 
+    font-size: 16px; 
+    display: block; 
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    background: rgba(212, 16, 16, 0.89); 
+    transition: background 0.3s, transform 0.2s, color 0.3s; 
+}
+
+.sidebar .log:hover {
+    background-color: rgba(231, 43, 43, 0.877); 
+    color: #f8f9fa; 
+    transform: translateX(5px); 
+}
+
+/* Contenu principal */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-left: 20%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+#note {
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #375601, #02670f); /* Dégradé attrayant */
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px ;
+    margin-left: 10%;
+    width: 80%; /* Ajuster selon la taille souhaitée */
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#note::before {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+#note:hover {
+    background: linear-gradient(135deg, #1b5205, #026011); /* Variation subtile au survol */
+    transform: scale(1.02); /* Agrandissement léger */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Ombre plus forte */
+}
+
+/* Styles pour l'alerte */
+#unc {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 30px;
+    margin: 20px auto;
+    margin-top: 5%;
+    width: 30%; /* Ajuster selon la taille souhaitée */
+    animation: alertAnimation 2s infinite; /* Animation répétée */
+}
+
+.unc::before {
+    content: '';
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+/* Animation pour l'alerte */
+@keyframes alertAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    #note {
+        width: 90%; /* Réduire la largeur de la note */
+        font-size: 18px; /* Taille de police plus petite */
+    }
+
+    h1 {
+        font-size: 28px; /* Taille de police du titre plus petite */
+    }
+}
+
+/* Styles supplémentaires pour l'image au-dessus de la liste */
+img {
+    margin-left: 0;
+    margin-top: 0; /* Pas de marge au-dessus de l'image */
+    width: auto; /* Adapter l'image à la largeur du conteneur */
+    height: auto; /* Maintenir les proportions */
+}
+.alert {
+    padding: 15px;
+    background-color: #5c9003aa;
+    color: white;
+    margin-bottom: 3%;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }

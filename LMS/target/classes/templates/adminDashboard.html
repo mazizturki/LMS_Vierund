@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord Admin</title>
+    <link rel="stylesheet" href="..\static\styles.css">
+    <link rel="icon" href="..\static\logo.png" type="image/png">
+
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <ul>
+                <div class="logo""><img src="..\static\logo.png" alt="Logo"></div>
+                <li><a href="retournerLivre.html" id="a">Retourner un Livre</a></li>
+                <li><a href="listeEtudiant.html" id="a">Liste des Étudiants</a></li>
+                <li><a href="ajoutEtudiant.html" id="a">Ajouter un Étudiant</a></li>
+                <li><a href="suppEtudiant.html" id="a">Supprimer un Étudiant</a></li>
+                <li><a href="louerInv.html"id="a">Louer pour un Invité</a></li>
+                <li><a href="listeLivre.html"id="a">Liste des Livres</a></li>
+                <li><a href="alert.html"id="a">Alertes</a></li>
+                <li><a href="autreFonct.html"id="a">Autres Fonctionnalités</a></li>
+                <li><a href="login.html" class="log">Se Déconnecter</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <h1>Bienvenue, Admin</h1>
+            <p>Utilisez le menu pour naviguer et gérer la bibliothèque.</p>
+            <p class="avert"><img src="../static/underC.png" alt="Under Constraction" id="unc"></p>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                <strong>Info !</strong> Les fonctionnalités sont prêt a utiliser.
+            </div>
+        </main>
+    </div>
+</body>
+</html>
